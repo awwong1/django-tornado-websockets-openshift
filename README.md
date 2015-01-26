@@ -56,5 +56,6 @@ That's it, you can now view your application
 To view your application locally in a development environment,
 simply run app.py and navigate to localhost:8080 within a web browser.
 
+    python2.7 manage.py collectstatic
     python2.7 app.py
     
