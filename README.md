@@ -53,9 +53,14 @@ That's it, you can now view your application
 
     http://tornado-$yournamespace.rhcloud.com
     
+Be sure to create your super user to access the admin portion of the website.
+
+    rhc ssh django-tornado
+    python app-root/repo/manage.py createsuperuser
+
 To view your application locally in a development environment,
 simply run app.py and navigate to localhost:8080 within a web browser.
 
-    python2.7 manage.py collectstatic
-    python2.7 app.py
+    python manage.py collectstatic
+    python app.py
     

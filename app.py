@@ -21,6 +21,7 @@ def get_bind_interface():
     ipaddr = os.getenv("OPENSHIFT_PYTHON_IP")
     return ipaddr if ipaddr else "127.0.0.1"
 
+
 def get_bind_interface_port():
     port = os.getenv("OPENSHIFT_PYTHON_PORT")
     try:
@@ -32,12 +33,11 @@ def get_bind_interface_port():
 
 # Server main.
 def start_tornado():
-    #  Tornado server address and port number.
+    # Tornado server address and port number.
     tornado.options.define("address", default=get_bind_interface(),
                            help="network address/interface to bind to")
     tornado.options.define("port", default=get_bind_interface_port(),
-                           help="port number to bind to", type=int
-    )
+                           help="port number to bind to", type=int)
     tornado.options.parse_command_line()
 
     zoptions = tornado.options.options
@@ -47,7 +47,7 @@ def start_tornado():
 
 
 #
-#  __main__:  main code.
+# __main__:  main code.
 #
 if __name__ == "__main__":
     sys.path.append(get_libs_path())
