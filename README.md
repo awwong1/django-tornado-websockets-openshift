@@ -28,20 +28,20 @@ Create a namespace, if you haven't already done so:
 
 Create a python-2.7 application:
 
-    rhc app create django-tornado python-2.7
+    rhc app create dtornado python-2.7
     
 Add the database cartridge (Choose one):
 
-    rhc add-cartridge mysql-5.5 --app django-tornado
+    rhc add-cartridge mysql-5.5 --app dtornado
 
     OR
 
-    rhc add-cartridge postgresql-9.2 --app django-tornado
+    rhc add-cartridge postgresql-9.2 --app dtornado
 
 
 Add this `django-tornado-websockets-openshift` repository:
 
-    cd django-tornado
+    cd dtornado
     git remote add upstream -m master https://github.com/awwong1/django-tornado-websockets-openshift.git
     git pull -s recursive -X theirs upstream master
     
@@ -51,11 +51,11 @@ Then push the repo to OpenShift
 
 That's it, you can now view your application
 
-    http://tornado-$yournamespace.rhcloud.com
+    http://dtornado-$yournamespace.rhcloud.com
     
 Be sure to create your super user to access the admin portion of the website.
 
-    rhc ssh django-tornado
+    rhc ssh dtornado
     python app-root/repo/manage.py createsuperuser
 
 To view your application locally in a development environment,
